@@ -24,7 +24,7 @@ class Program
 
         else if (grade >= 80)
         {
-            Console.WriteLine("YOur grade is B");
+            Console.WriteLine("Your grade is B");
         }
 
         else if (grade >= 70)
