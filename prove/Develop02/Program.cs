@@ -1,5 +1,5 @@
 using System;
-using System.Collection.Generics;
+using System.Collections.Generics;
 using System.IO;
 
 class Program
@@ -23,24 +23,24 @@ class Program
             Console.WriteLine("1. Write");
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Save");
-            Consile.WriteLine("4. Load");
-            Console.WriteLIne("5. Quit");
+            Console.WriteLine("4. Load");
+            Console.WriteLine("5. Quit");
 
             Console.Write("Chose and option: ");
-            choice = int.parse(Console.ReadLine());
-            Console.Write.Line();
+            choice = int.Parse(Console.ReadLine());
+            Console.WriteLine();
 
             if (choice == 1)
             {
                 Random p = new Random();
                 string prompt = prompts[p.Next(prompts.Count)];
                 Console.WriteLine($"{prompt}");
-                Console.write("Your response: ");
+                Console.Write("Your response: ");
                 string response = Console.ReadLine();
 
                 Entry entry = new Entry();
                 entry._date = DateTime.Now.ToString("dd-MM-yyyy");
-                entry._promt = prompt;
+                entry._prompt = prompt;
                 entry._response = response;
 
                 journal.AddEntry(entry);
@@ -79,23 +79,23 @@ class Entry
 
     public void DisplayEntry()
     {
-        Console.Writeline($"Date: {_date}");
-        Console.Writeline($"{_prompt}");
-        Console.Writeline($"Response: {_response}");
+        Console.WriteLine($"Date: {_date}");
+        Console.WriteLine($"{_prompt}");
+        Console.WriteLine($"Response: {_response}");
     }
 }
 
-class journal
+class Journal
 {
     private List<Entry> _entries = new List<Entry>();
     public void AddEntry(Entry entry)
     {
-        _entries.Add(entry)
+        _entries.Add(entry);
     }
 
     public void DisplayJournal()
     {
-        Console.Writeline("Journal Entries");
+        Console.WriteLine("Journal Entries");
         foreach (Entry entry in _entries)
         {
             entry.DisplayEntry();
@@ -104,7 +104,7 @@ class journal
 
     public void SaveToFile(string filename)
     {
-        using (StreaWriter writer = new StreamWriter(filename))
+        using (StreamWriter writer = new StreamWriter(filename))
         {
             foreach (Entry entry in _entries)
             {
@@ -119,10 +119,10 @@ class journal
         string[] lines = File.ReadAllLines(filename);
         foreach (string line in lines)
         {
-            string[] parts = line.split("|");
+            string[] parts = line.Split("|");
 
             Entry entry = new Entry();
-            entry._date[0];
+            entry._date = parts[0];
             entry._prompt = parts[1];
             entry._response = parts[2];
 
