@@ -83,6 +83,11 @@ class Entry
         Console.WriteLine($"{_prompt}");
         Console.WriteLine($"Response: {_response}");
     }
+
+    public string ToFileFormat()
+    {
+        return $"{_date}|{_prompt}|{_response}";
+    }
 }
 
 class Journal
