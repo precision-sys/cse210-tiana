@@ -8,4 +8,8 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="prove/Develop03/*.cs" />
+  </ItemGroup>
+
 </Project>
