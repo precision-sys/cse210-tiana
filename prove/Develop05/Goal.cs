@@ -16,6 +16,8 @@ abstract class Goal
         _points = points;
     }
 
+    
+
     public abstract int RecordEvent();
     public abstract string GetStatus();
     public abstract string SaveString();

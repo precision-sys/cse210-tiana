@@ -12,6 +12,9 @@ class SimpleGoal : Goal
         _isCompleted = false;
     }
 
+
+    
+
     public override int RecordEvent()
     {
         if (!_isCompleted)
@@ -27,10 +30,13 @@ class SimpleGoal : Goal
         return _isCompleted ? "[X]" : "[ ]";
     }
 
+
+
     public override string SaveString()
     {
         return $"Simple|{_name}|{_description}|{_points}|{_isCompleted}";
     }
+
 
     public void SetIsCompleted(bool completed)
     {

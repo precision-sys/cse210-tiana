@@ -16,6 +16,8 @@ class EternalGoal : Goal
         return _points;
     }
 
+    
+
     public override string GetStatus()
     {
         return "[~]";

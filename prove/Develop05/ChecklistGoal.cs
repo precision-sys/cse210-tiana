@@ -17,6 +17,7 @@ class ChecklistGoal : Goal
         _bonus = bonus;
     }
 
+
     public override int RecordEvent()
     {
         _currentCount++;
@@ -27,10 +28,14 @@ class ChecklistGoal : Goal
         return _points;
     }
 
+
+
     public override string GetStatus()
     {
         return $"[{_currentCount}/{_targetCount}]";
     }
+
+    
 
     public override string SaveString()
     {
